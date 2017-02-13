@@ -7,28 +7,28 @@
 
     public class DFSTreeTraversal : ITreeTraversal
     {
-        private ICollection<INode> traversaledTreeNodes;
+        private ICollection<INode> visiedTreeNodes;
 
         public DFSTreeTraversal()
         {
-            this.traversaledTreeNodes = new HashSet<INode>();
+            this.visiedTreeNodes = new HashSet<INode>();
         }
 
         public ICollection<INode> TraversalTree(INode startNode)
         {
-            this.traversaledTreeNodes.Clear();
+            this.visiedTreeNodes.Clear();
             this.depthFirstSearch(startNode);
 
-            return this.traversaledTreeNodes;
+            return this.visiedTreeNodes;
         }
 
         private void depthFirstSearch(INode startNode)
         {
-            this.traversaledTreeNodes.Add(startNode);
+            this.visiedTreeNodes.Add(startNode);
 
             for (int i = 0; i < startNode.NumberOfChildren; i++)
             {
-                depthFirstSearch(startNode.GetChild(i));
+                this.depthFirstSearch(startNode.GetChild(i));
             }
         }
     }
