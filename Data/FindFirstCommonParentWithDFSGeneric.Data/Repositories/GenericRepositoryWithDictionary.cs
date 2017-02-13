@@ -49,7 +49,7 @@
             {
                 var dataToReturn = new Dictionary<string, TNode>(data);
 
-                return this.data;
+                return dataToReturn;
             }
 
             throw new NullReferenceException("The collection is not valid");

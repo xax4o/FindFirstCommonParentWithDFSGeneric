@@ -8,7 +8,7 @@
     {
         private IFirstCommonNodeFinder commonNodeFinder;
         private IWriter outputWriter;
-        private IReader inputReader; 
+        private IReader inputReader;
 
         public GetFirstCommonNodeCommand(IFirstCommonNodeFinder firstNodeFinder, IWriter writer, IReader reader)
         {
@@ -19,15 +19,15 @@
 
         public void Execute()
         {
-            this.outputWriter.Write("Enter a");
-            var a = this.inputReader.ReadLine();
+            this.outputWriter.Write("Enter first node to search: ");
+            var firstSearchedNode = this.inputReader.ReadLine();
 
-            this.outputWriter.Write("Enter b");
-            var b = this.inputReader.ReadLine();
+            this.outputWriter.Write("Enter second node to search: ");
+            var secondSearchedNode = this.inputReader.ReadLine();
 
-            var result = this.commonNodeFinder.Find(a, b);
+            var result = this.commonNodeFinder.Find(firstSearchedNode, secondSearchedNode);
 
-            this.outputWriter.WriteLine(result.Name);
+            this.outputWriter.WriteLine(string.Format("The first common node of {0} and {1} is {2}", firstSearchedNode, secondSearchedNode, result.Name));
         }
     }
 }
