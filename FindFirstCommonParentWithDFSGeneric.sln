@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Models", "Models", "{65D938DB-7450-4AE0-9EA8-1633908AD206}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{80E22823-9683-4EC3-942B-BA5906BF299C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Logic", "Logic", "{9272ED3C-8D0D-4392-A5B7-F8C500E87699}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindFirstCommonParentWithDFSGeneric.Data", "Data\FindFirstCommonParentWithDFSGeneric.Data\FindFirstCommonParentWithDFSGeneric.Data.csproj", "{FD978C18-068F-47B6-A18A-23ED2D82F4D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindFirstCommonParentWithDFSGeneric.Models", "Models\FindFirstCommonParentWithDFSGeneric.Models\FindFirstCommonParentWithDFSGeneric.Models.csproj", "{3D9B8E26-27E8-45BD-9064-919B3D2E0178}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindFirstCommonParentWithDFSGeneric.Logic", "Logic\FindFirstCommonParentWithDFSGeneric.Logic\FindFirstCommonParentWithDFSGeneric.Logic.csproj", "{60A07737-6BE3-4F33-84F6-B9A75DB3F1BA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ConsoleUI", "ConsoleUI", "{1BD09E39-FDEC-4F42-BB21-7095411A966B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindFirstCommonParentWithDFSGeneric.ConsoleUI", "ConsoleUI\FindFirstCommonParentWithDFSGeneric.ConsoleUI\FindFirstCommonParentWithDFSGeneric.ConsoleUI.csproj", "{72A36180-4B7A-4E67-BF71-E638E99F6B38}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FD978C18-068F-47B6-A18A-23ED2D82F4D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD978C18-068F-47B6-A18A-23ED2D82F4D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD978C18-068F-47B6-A18A-23ED2D82F4D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD978C18-068F-47B6-A18A-23ED2D82F4D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D9B8E26-27E8-45BD-9064-919B3D2E0178}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D9B8E26-27E8-45BD-9064-919B3D2E0178}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D9B8E26-27E8-45BD-9064-919B3D2E0178}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D9B8E26-27E8-45BD-9064-919B3D2E0178}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60A07737-6BE3-4F33-84F6-B9A75DB3F1BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60A07737-6BE3-4F33-84F6-B9A75DB3F1BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60A07737-6BE3-4F33-84F6-B9A75DB3F1BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60A07737-6BE3-4F33-84F6-B9A75DB3F1BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72A36180-4B7A-4E67-BF71-E638E99F6B38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72A36180-4B7A-4E67-BF71-E638E99F6B38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72A36180-4B7A-4E67-BF71-E638E99F6B38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72A36180-4B7A-4E67-BF71-E638E99F6B38}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3D9B8E26-27E8-45BD-9064-919B3D2E0178} = {65D938DB-7450-4AE0-9EA8-1633908AD206}
+		{FD978C18-068F-47B6-A18A-23ED2D82F4D5} = {80E22823-9683-4EC3-942B-BA5906BF299C}
+		{60A07737-6BE3-4F33-84F6-B9A75DB3F1BA} = {9272ED3C-8D0D-4392-A5B7-F8C500E87699}
+		{72A36180-4B7A-4E67-BF71-E638E99F6B38} = {1BD09E39-FDEC-4F42-BB21-7095411A966B}
+	EndGlobalSection
+EndGlobal
