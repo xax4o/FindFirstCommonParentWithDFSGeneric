@@ -4,7 +4,7 @@
 
     using FindFirstCommonParentWithDFSGeneric.ConsoleUI.ConsoleIO.Contracts;
 
-    public class Reader : IReader
+    public class ConsoleReader : IReader
     {
         public string ReadLine()
         {

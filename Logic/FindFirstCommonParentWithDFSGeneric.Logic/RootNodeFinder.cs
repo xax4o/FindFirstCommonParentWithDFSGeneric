@@ -20,7 +20,7 @@
                 }
             }
 
-            throw new ArgumentException("There is no root node");
+            return null;
         }
     }
 }

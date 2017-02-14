@@ -46,8 +46,8 @@
     <Compile Include="Commands\GetFirstCommonNodeCommand.cs" />
     <Compile Include="ConsoleIO\Contracts\IReader.cs" />
     <Compile Include="ConsoleIO\Contracts\IWriter.cs" />
-    <Compile Include="ConsoleIO\Writer.cs" />
-    <Compile Include="ConsoleIO\Reader.cs" />
+    <Compile Include="ConsoleIO\ConsoleWriter.cs" />
+    <Compile Include="ConsoleIO\ConsoleReader.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

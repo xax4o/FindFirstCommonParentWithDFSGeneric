@@ -4,7 +4,7 @@
 
     using FindFirstCommonParentWithDFSGeneric.ConsoleUI.ConsoleIO.Contracts;
 
-    public class Writer : IWriter
+    public class ConsoleWriter : IWriter
     {
         public void Write(string text)
         {

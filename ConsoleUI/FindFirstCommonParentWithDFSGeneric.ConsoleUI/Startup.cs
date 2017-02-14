@@ -28,12 +28,12 @@
 
                 if (command == "1")
                 {
-                    commandType = new AddCommand(nodes, new Writer(), new Reader());
+                    commandType = new AddCommand(nodes, new ConsoleWriter(), new ConsoleReader());
                 }
                 else if (command == "2")
                 {
                     var finder = new FirstCommonNodeFinder(nodes, new DFSTreeTraversal(), new RootNodeFinder());
-                    commandType = new GetFirstCommonNodeCommand(finder, new Writer(), new Reader());
+                    commandType = new GetFirstCommonNodeCommand(finder, new ConsoleWriter(), new ConsoleReader());
                 }
                 else if (command == "3")
                 {

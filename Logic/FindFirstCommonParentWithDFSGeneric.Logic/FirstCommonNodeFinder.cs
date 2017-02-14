@@ -26,6 +26,17 @@
             var index = 0;
             var startNode = this.rootNodeFinder.GetRootNode(this.data);
 
+            if (startNode == null)
+            {
+                return null;
+            }
+
+            if (!(this.data.Contains(firstSearchedNode) 
+                && this.data.Contains(secondSearchedNode)))
+            {
+                return null;
+            }
+
             while (true)
             {
                 ICollection<INode> visitedNodes;
@@ -53,8 +64,6 @@
 
                 index++;
             }
-
-            throw new ArgumentException("No Common node");
         }
     }
 }

@@ -25,9 +25,16 @@
             this.outputWriter.Write("Enter second node to search: ");
             var secondSearchedNode = this.inputReader.ReadLine();
 
-            var result = this.commonNodeFinder.Find(firstSearchedNode, secondSearchedNode);
+            var commonNode = this.commonNodeFinder.Find(firstSearchedNode, secondSearchedNode);
 
-            this.outputWriter.WriteLine(string.Format("The first common node of {0} and {1} is {2}", firstSearchedNode, secondSearchedNode, result.Name));
+            if (commonNode != null)
+            {
+                this.outputWriter.WriteLine(string.Format("The first common node of {0} and {1} is {2}", firstSearchedNode, secondSearchedNode, commonNode.Name));
+            }
+            else
+            {
+                this.outputWriter.WriteLine("There is no first common node.");
+            }
         }
     }
 }
