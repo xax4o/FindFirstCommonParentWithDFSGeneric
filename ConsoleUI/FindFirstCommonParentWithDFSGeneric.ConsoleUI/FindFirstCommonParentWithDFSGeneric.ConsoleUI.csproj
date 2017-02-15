@@ -32,6 +32,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Ninject">
+      <HintPath>..\..\packages\Ninject.3.2.2.0\lib\net45-full\Ninject.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -41,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CommandFactory.cs" />
     <Compile Include="Commands\AddCommand.cs" />
     <Compile Include="Commands\Contracts\ICommand.cs" />
     <Compile Include="Commands\GetFirstCommonNodeCommand.cs" />
@@ -48,11 +52,16 @@
     <Compile Include="ConsoleIO\Contracts\IWriter.cs" />
     <Compile Include="ConsoleIO\ConsoleWriter.cs" />
     <Compile Include="ConsoleIO\ConsoleReader.cs" />
+    <Compile Include="Contracts\ICommandFactory.cs" />
+    <Compile Include="Contracts\IEngine.cs" />
+    <Compile Include="Engine.cs" />
+    <Compile Include="IoC\FindFirstCommonParentWithDFSGenericModule.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Data\FindFirstCommonParentWithDFSGeneric.Data\FindFirstCommonParentWithDFSGeneric.Data.csproj">
