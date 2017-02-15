@@ -28,7 +28,7 @@
                 return null;
             }
 
-            if (this.data.GetByIndex(firstSearchedNode).Equals(this.data.GetByIndex(secondSearchedNode)))
+            if (firstSearchedNode.Equals(secondSearchedNode))
             {
                 return this.data.GetByIndex(firstSearchedNode);
             }
