@@ -7,7 +7,6 @@
     using FindFirstCommonParentWithDFSGeneric.Models.Contracts;
     using FindFirstCommonParentWithDFSGeneric.Data.Repositories.Contracts;
 
-
     public class FirstCommonNodeFinder : IFirstCommonNodeFinder
     {
         private IGenericRepository<INode> data;
@@ -23,19 +22,19 @@
 
         public INode Find(string firstSearchedNode, string secondSearchedNode)
         {
-            var index = 0;
-            var startNode = this.rootNodeFinder.GetRootNode(this.data);
-
-            if (startNode == null)
-            {
-                return null;
-            }
-
             if (!(this.data.Contains(firstSearchedNode) 
                 && this.data.Contains(secondSearchedNode)))
             {
                 return null;
             }
+
+            if (this.data.GetByIndex(firstSearchedNode).Equals(this.data.GetByIndex(secondSearchedNode)))
+            {
+                return this.data.GetByIndex(firstSearchedNode);
+            }
+
+            var index = 0;
+            var startNode = this.rootNodeFinder.GetRootNode(this.data);
 
             while (true)
             {

@@ -48,6 +48,8 @@
     <Compile Include="Commands\AddCommand.cs" />
     <Compile Include="Commands\Contracts\ICommand.cs" />
     <Compile Include="Commands\GetFirstCommonNodeCommand.cs" />
+    <Compile Include="ConsoleIO\ConsoleClearer.cs" />
+    <Compile Include="ConsoleIO\Contracts\IClearer.cs" />
     <Compile Include="ConsoleIO\Contracts\IReader.cs" />
     <Compile Include="ConsoleIO\Contracts\IWriter.cs" />
     <Compile Include="ConsoleIO\ConsoleWriter.cs" />

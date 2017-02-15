@@ -5,30 +5,37 @@
 
     using FindFirstCommonParentWithDFSGeneric.ConsoleUI.Commands.Contracts;
     using FindFirstCommonParentWithDFSGeneric.ConsoleUI.Contracts;
+    using FindFirstCommonParentWithDFSGeneric.ConsoleUI.ConsoleIO.Contracts;
 
     public class Engine : IEngine
     {
         private ICommandFactory commandFactory;
+        private IWriter outputWriter;
+        private IReader inputReader;
+        private IClearer outputClearer;
 
-        public Engine(ICommandFactory commandFactory)
+        public Engine(ICommandFactory commandFactory, IWriter writer, IReader reader, IClearer clearer)
         {
-            this.commandFactory = commandFactory;        
+            this.commandFactory = commandFactory;
+            this.outputWriter = writer;
+            this.inputReader = reader;
+            this.outputClearer = clearer;
         }
 
         public void Run()
         {
             while (true)
             {
-                Console.WriteLine("1. Add nodes");
-                Console.WriteLine("2. Get common node");
-                Console.WriteLine("3. Exit");
+                this.outputWriter.WriteLine("1. Add nodes");
+                this.outputWriter.WriteLine("2. Get common node");
+                this.outputWriter.WriteLine("3. Exit");
 
-                Console.Write("Choose: ");
-                var command = Console.ReadLine();
-                
+                this.outputWriter.Write("Choose: ");
+                var command = this.inputReader.ReadLine();
+
                 if (command == "3")
                 {
-                    Console.WriteLine("Good Bye");
+                    this.outputWriter.WriteLine("Good Bye");
                     break;
                 }
 
@@ -37,18 +44,18 @@
                 {
                     commandType = this.commandFactory.CreateCommand(command);
                 }
-                catch(ArgumentException)
+                catch (ArgumentException)
                 {
-                    Console.WriteLine("Invalid command");
+                    this.outputWriter.WriteLine("Invalid command");
                     Thread.Sleep(1000);
-                    Console.Clear();
+                    this.outputClearer.Clear();
                     continue;
                 }
 
                 commandType.Execute();
 
                 Thread.Sleep(4000);
-                Console.Clear();
+                this.outputClearer.Clear();
             }
         }
     }

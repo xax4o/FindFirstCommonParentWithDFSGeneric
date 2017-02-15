@@ -25,6 +25,7 @@
             this.Bind<ICommandFactory>().To<CommandFactory>();
             this.Bind<IWriter>().To<ConsoleWriter>();
             this.Bind<IReader>().To<ConsoleReader>();
+            this.Bind<IClearer>().To<ConsoleClearer>();
         }
     }
 }
