@@ -3,12 +3,7 @@
     using System;
     using System.Threading;
 
-    using FindFirstCommonParentWithDFSGeneric.ConsoleUI.Commands;
     using FindFirstCommonParentWithDFSGeneric.ConsoleUI.Commands.Contracts;
-    using FindFirstCommonParentWithDFSGeneric.ConsoleUI.ConsoleIO;
-    using FindFirstCommonParentWithDFSGeneric.Data.Repositories.Contracts;
-    using FindFirstCommonParentWithDFSGeneric.Logic.Contracts;
-    using FindFirstCommonParentWithDFSGeneric.Models.Contracts;
     using FindFirstCommonParentWithDFSGeneric.ConsoleUI.Contracts;
 
     public class Engine : IEngine

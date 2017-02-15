@@ -27,7 +27,7 @@
             this.inputReader = inputReader;
         }
 
-        public ICommand CreateCommand(string commandName)
+        public virtual ICommand CreateCommand(string commandName)
         {
             ICommand commandType;
 
