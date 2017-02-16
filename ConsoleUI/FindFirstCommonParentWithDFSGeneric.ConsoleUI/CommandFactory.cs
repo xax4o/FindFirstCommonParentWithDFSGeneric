@@ -19,19 +19,19 @@
         private ICommand addCommand;
         private ICommand getFirstCommonNodeCommand;
 
-        public CommandFactory(IGenericRepository<INode> data, IFirstCommonNodeFinder finder, IWriter outputWriter, IReader inputReader)
+        public CommandFactory(IGenericRepository<INode> data, IFirstCommonNodeFinder finder, IWriter writer, IReader reader)
         {
             this.data = data;
             this.finder = finder;
-            this.outputWriter = outputWriter;
-            this.inputReader = inputReader;
+            this.outputWriter = writer;
+            this.inputReader = reader;
         }
 
-        public virtual ICommand CreateCommand(string commandName)
+        public virtual ICommand CreateCommand(string command)
         {
             ICommand commandType;
 
-            if (commandName == "1")
+            if (command == "1")
             {
                 if (this.addCommand == null)
                 {
@@ -40,7 +40,7 @@
 
                 commandType = this.addCommand;
             }
-            else if (commandName == "2")
+            else if (command == "2")
             {
                 if (this.getFirstCommonNodeCommand == null)
                 {

@@ -41,8 +41,8 @@
                 this.outputWriter.Write(string.Format("Enter tree node {0} in the format /Parrent Child/: ", i + 1));
                 var arguments = this.inputReader.ReadLine().Split(' ');
 
-                string parent = string.Empty;
-                string child = string.Empty;
+                var parent = string.Empty;
+                var child = string.Empty;
 
                 try
                 {
