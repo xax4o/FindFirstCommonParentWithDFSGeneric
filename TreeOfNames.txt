@@ -1,0 +1,32 @@
+                                         John
+
+
+
+                  Peter                   Ana                   Sara                       
+
+       Maria                  Ema                          Lora     
+     
+
+Grigor Nikol Mickael   Ivan  Martin  George            Erik     Jack
+                              
+       Max                              Victoria
+ 
+
+
+16
+John Peter
+John Ana
+John Sara
+Peter Maria
+Peter Ema
+Maria Grigor
+Maria Nikol
+Maria Mickael
+Nikol Max
+Ema Ivan
+Ema Martin
+Ema George
+George Victoria
+Sara Lora
+Lora Erik
+Lora Jack        
