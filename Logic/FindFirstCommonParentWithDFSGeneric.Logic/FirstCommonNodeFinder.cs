@@ -35,6 +35,8 @@
 
             var index = 0;
             var startNode = this.rootNodeFinder.GetRootNode(this.data);
+            var firstNode = data.GetByIndex(firstSearchedNode);
+            var secondNode = data.GetByIndex(secondSearchedNode);
 
             while (true)
             {
@@ -49,14 +51,14 @@
                     throw new NullReferenceException("No such child");
                 }
 
-                if (visitedNodes.Contains(data.GetByIndex(firstSearchedNode))
-                    && visitedNodes.Contains(data.GetByIndex(secondSearchedNode)))
+                if (visitedNodes.Contains(firstNode)
+                    && visitedNodes.Contains(secondNode))
                 {
                     startNode = startNode.GetChild(index);
                     index = -1;
                 }
-                else if (visitedNodes.Contains(data.GetByIndex(firstSearchedNode))
-                    || visitedNodes.Contains(data.GetByIndex(secondSearchedNode)))
+                else if (visitedNodes.Contains(firstNode)
+                    || visitedNodes.Contains(secondNode))
                 {
                     return startNode;
                 }
