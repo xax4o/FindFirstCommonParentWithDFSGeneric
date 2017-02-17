@@ -7,7 +7,7 @@
     public interface IGenericRepository<TNode>
         where TNode : INode
     {
-        void Add(string index, TNode entity);
+        void Add(TNode entity);
 
         TNode GetByIndex(string index);
 

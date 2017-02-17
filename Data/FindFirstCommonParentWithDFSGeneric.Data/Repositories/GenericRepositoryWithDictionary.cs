@@ -21,11 +21,11 @@
             this.data = data;
         }
 
-        public void Add(string index, TNode entity)
+        public void Add(TNode entity)
         {
             if (this.data != null)
             {
-                this.data.Add(index, entity);
+                this.data.Add(entity.Name, entity);
             }
             else
             {

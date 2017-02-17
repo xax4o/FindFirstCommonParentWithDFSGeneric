@@ -65,7 +65,7 @@
                 else
                 {
                     parentNode = new Node(parent.ToString());
-                    nodes.Add(parent, parentNode);
+                    nodes.Add(parentNode);
                 }
 
                 if (nodes.Contains(child))
@@ -75,7 +75,7 @@
                 else
                 {
                     childNode = new Node(child.ToString());
-                    nodes.Add(child, childNode);
+                    nodes.Add(childNode);
                 }
 
                 parentNode.AddChild(childNode);
