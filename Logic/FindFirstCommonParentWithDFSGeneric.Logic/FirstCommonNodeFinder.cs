@@ -33,8 +33,8 @@
                 return this.data.GetByIndex(firstSearchedNode);
             }
 
-            var index = 0;
-            var startNode = this.rootNodeFinder.GetRootNode(this.data);
+            var currentIndex = 0;
+            var rootNode = this.rootNodeFinder.GetRootNode(this.data);
             var firstNode = data.GetByIndex(firstSearchedNode);
             var secondNode = data.GetByIndex(secondSearchedNode);
 
@@ -42,9 +42,9 @@
             {
                 ICollection<INode> visitedNodes;
 
-                if (index < startNode.NumberOfChildren)
+                if (currentIndex < rootNode.NumberOfChildren)
                 {
-                    visitedNodes = this.treeTraversal.TraversalTree(startNode.GetChild(index));
+                    visitedNodes = this.treeTraversal.TraversalTree(rootNode.GetChild(currentIndex));
                 }
                 else
                 {
@@ -54,16 +54,16 @@
                 if (visitedNodes.Contains(firstNode)
                     && visitedNodes.Contains(secondNode))
                 {
-                    startNode = startNode.GetChild(index);
-                    index = -1;
+                    rootNode = rootNode.GetChild(currentIndex);
+                    currentIndex = -1;
                 }
                 else if (visitedNodes.Contains(firstNode)
                     || visitedNodes.Contains(secondNode))
                 {
-                    return startNode;
+                    return rootNode;
                 }
 
-                index++;
+                currentIndex++;
             }
         }
     }
