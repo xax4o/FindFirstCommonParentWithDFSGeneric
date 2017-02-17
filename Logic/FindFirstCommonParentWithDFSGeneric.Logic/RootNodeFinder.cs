@@ -14,9 +14,9 @@
 
             foreach (var node in nodes)
             {
-                if (!node.Value.HasParent)
+                if (!node.HasParent)
                 {
-                    return node.Value;
+                    return node;
                 }
             }
 

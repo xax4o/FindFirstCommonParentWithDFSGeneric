@@ -11,7 +11,7 @@
 
         TNode GetByIndex(string index);
 
-        IDictionary<string, TNode> GetAll();
+        ICollection<TNode> GetAll();
 
         bool Contains(string index);
     }

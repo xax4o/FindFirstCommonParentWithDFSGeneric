@@ -43,11 +43,11 @@
             throw new NullReferenceException("No such index");
         }
 
-        public IDictionary<string, TNode> GetAll()
+        public ICollection<TNode> GetAll()
         {
             if (this.data != null)
             {
-                var dataToReturn = new Dictionary<string, TNode>(data);
+                var dataToReturn = this.data.Values;
 
                 return dataToReturn;
             }
